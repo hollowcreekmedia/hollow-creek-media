@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hollow Creek Media — Rural Real Estate Social</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root { --bark: #1e1408; --moss: #3a5438; --sage: #7a9e78; --cream: #f5f0e6; --gold: #c4973e; --warm: #faf7f0; --text: #2a1e0a; --muted: #7a6e58; }
+        *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Jost', sans-serif; background: var(--warm); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+        
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; background: rgba(250,247,240,0.9); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(196,151,62,0.1); }
+        .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; letter-spacing: 0.1em; text-decoration: none; color: var(--bark); }
+        .nav-logo span { color: var(--moss); }
+        .nav-links { display: flex; gap: 30px; list-style: none; }
+        .nav-links a { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; color: var(--muted); transition: 0.3s; }
+        .nav-links a:hover { color: var(--moss); }
+
+        .hero { 
+            min-height: 100vh; 
+            display: flex; 
+            align-items: center; 
+            padding: 120px 48px; 
+            background: linear-gradient(rgba(250,247,240,0.8), rgba(250,247,240,0.8)), 
+                        url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=2000');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(40px, 8vw, 80px); font-weight: 300; line-height: 1.1; margin-bottom: 30px; }
+        .hero h1 em { font-style: italic; color: var(--moss); }
+
+        .btn { display: inline-block; padding: 15px 35px; background: var(--moss); color: white; text-decoration: none; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; border: none; cursor: pointer; transition: 0.3s; font-family: 'Jost'; }
+        .btn:hover { background: var(--bark); letter-spacing: 0.25em; }
+
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 100px 48px; background: var(--moss); }
+        .service-card { padding: 40px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); color: white; transition: 0.3s; }
+        .service-card.featured { border: 1px solid var(--gold); background: rgba(196,151,62,0.05); }
+        .service-name { font-family: 'Cormorant Garamond', serif; font-size: 28px; margin-bottom: 15px; }
+        .price { color: var(--gold); font-weight: 500; margin-top: 20px; font-size: 12px; letter-spacing: 1px; }
+
+        form { display: flex; flex-direction: column; gap: 15px; max-width: 500px; margin: 0 auto; }
+        input, textarea { padding: 15px; border: 1px solid rgba(0,0,0,0.1); font-family: 'Jost'; background: white; }
+        input:focus, textarea:focus { outline: none; border-color: var(--sage); }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s ease-out; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        footer { background: var(--bark); color: rgba(255,255,255,0.5); padding: 80px 48px; text-align: center; }
+        footer a { color: white; text-decoration: none; margin: 0 15px; font-size: 10px; letter-spacing: 1px; }
+
+        @media (max-width: 768px) {
+            nav { padding: 15px 20px; flex-direction: column; gap: 15px; }
+            .nav-links { display: flex !important; gap: 10px; flex-wrap: wrap; justify-content: center; }
+            .nav-links a { font-size: 9px; }
+            .services-grid { padding: 60px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="nav-logo">Hollow <span>Creek</span> Media</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">Method</a></li>
+            <li><a href="blog.html">Field Notes</a></li>
+            <li><a href="#contact" style="background:var(--moss); color:white; padding:8px 15px;">Get Started</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div style="max-width: 800px;">
+            <p style="text-transform: uppercase; letter-spacing: 3px; font-size: 10px; color: var(--gold); margin-bottom: 20px;">Est. 2026 • Rural Real Estate Specialists</p>
+            <h1>Your listings deserve to be <em>seen.</em></h1>
+            <p style="font-size: 18px; font-weight: 300; color: var(--muted); margin-bottom: 40px; max-width: 500px;">Done-for-you social media management for land, farm, and small-town agents.</p>
+            <a href="#services" class="btn">View Packages</a>
+        </div>
+    </section>
+
+    <section class="services-grid" id="services">
+        <div class="service-card reveal">
+            <div class="service-name">The Seedling</div>
+            <p style="font-size: 14px; opacity: 0.7;">12 custom posts and captions delivered monthly for you to post.</p>
+            <div class="price">$299 / MONTH</div>
+        </div>
+        <div class="service-card featured reveal">
+            <div style="font-size: 9px; color: var(--gold); margin-bottom: 10px;">MOST POPULAR</div>
+            <div class="service-name">The Homestead</div>
+            <p style="font-size: 14px; opacity: 0.7;">15 posts + Reels, fully scheduled and managed for you.</p>
+            <div class="price">$599 / MONTH</div>
+        </div>
+        <div class="service-card reveal">
+            <div class="service-name">The Acreage</div>
+            <p style="font-size: 14px; opacity: 0.7;">Full-scale digital growth and ad management for brokerages.</p>
+            <div class="price">$999 / MONTH</div>
+        </div>
+    </section>
+
+    <section id="contact" style="padding: 100px 48px; background: var(--warm); text-align: center;">
+        <div style="max-width: 600px; margin: 0 auto;">
+            <h2 style="font-family:'Cormorant Garamond', serif; font-size: 42px; margin-bottom: 20px;">Get <em>Started.</em></h2>
+            <p style="color: var(--muted); margin-bottom: 40px; font-weight: 300;">Tell us about your listing or project, and we’ll get back to you within 24 hours.</p>
+
+            <!-- Corrected Formspree Integration -->
+            <form action="https://formspree.io/f/xbdwovwp" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Property details or questions..." rows="5" required style="resize: vertical;"></textarea>
+                
+                <!-- Replace 'yourusername' with your actual GitHub username below -->
+                <input type="hidden" name="_next" value="https://hollowcreekmedia.github.io/hollow-creek-media/thank-you.html">
+                
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div style="margin-bottom: 30px;">
+            <a href="portfolio.html">PORTFOLIO</a>
+            <a href="about.html">METHOD</a>
+            <a href="privacy.html">PRIVACY</a>
+        </div>
+        <p style="font-size: 10px;">&copy; 2026 HOLLOW CREEK MEDIA. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

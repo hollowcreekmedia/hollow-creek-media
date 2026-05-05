@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Field Notes — Hollow Creek Media</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root { --bark: #1e1408; --moss: #3a5438; --cream: #f5f0e6; --warm: #faf7f0; --text: #2a1e0a; --muted: #7a6e58; }
+        body { font-family: 'Jost', sans-serif; background: var(--warm); color: var(--text); line-height: 1.6; margin: 0; }
+        
+        nav { padding: 20px 48px; display: flex; justify-content: space-between; align-items: center; background: white; border-bottom: 1px solid #eee; }
+        .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; text-decoration: none; color: var(--bark); }
+        .nav-logo span { color: var(--moss); }
+        .nav-links { display: flex; gap: 30px; list-style: none; }
+        .nav-links a { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; color: var(--muted); }
+
+        .blog-header { padding: 120px 48px 60px; text-align: center; background: var(--cream); }
+        .blog-header h1 { font-family: 'Cormorant Garamond', serif; font-size: 54px; font-weight: 300; }
+
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; padding: 80px 48px; max-width: 1200px; margin: 0 auto; }
+        .post-card { background: white; border-radius: 2px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.03); transition: transform 0.3s; }
+        .post-card:hover { transform: translateY(-5px); }
+        .post-img { width: 100%; height: 250px; object-fit: cover; }
+        .post-content { padding: 30px; }
+        .post-meta { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 15px; }
+        .post-title { font-family: 'Cormorant Garamond', serif; font-size: 24px; margin-bottom: 15px; color: var(--bark); }
+        .post-excerpt { font-size: 14px; font-weight: 300; color: var(--muted); margin-bottom: 25px; }
+        
+        .read-more { font-size: 11px; letter-spacing: 2px; text-transform: uppercase; text-decoration: none; color: var(--moss); font-weight: 500; border-bottom: 1px solid var(--moss); padding-bottom: 5px; }
+        
+        footer { background: var(--bark); color: rgba(255,255,255,0.5); padding: 60px 48px; text-align: center; margin-top: 80px; }
+        @media (max-width: 768px) {
+    nav { 
+        padding: 15px 20px; 
+        flex-direction: column; 
+        gap: 10px;
+    }
+    .nav-links { 
+        display: flex !important; /* Forces the menu to show */
+        gap: 15px; 
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-links a {
+        font-size: 9px; /* Smaller text to fit on one line */
+    }
+    .container {
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+    h1 {
+        font-size: 36px; /* Prevents titles from breaking layout */
+    }
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="nav-logo">Hollow <span>Creek</span> Media</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">Method</a></li>
+            <li><a href="blog.html" style="color: var(--moss);">Field Notes</a></li>
+        </ul>
+    </nav>
+
+    <header class="blog-header">
+        <h1>Field <em>Notes.</em></h1>
+        <p style="text-transform: uppercase; font-size: 10px; letter-spacing: 2px; margin-top: 15px; color: var(--muted);">Strategies for the Modern Land Agent</p>
+    </header>
+
+    <main class="blog-grid">
+        <!-- Post 1 -->
+        <article class="post-card">
+            <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=600" class="post-img" alt="Farm at sunset">
+            <div class="post-content">
+                <div class="post-meta">Strategy • May 4, 2026</div>
+                <h2 class="post-title">The "Ghost Agent" Effect</h2>
+                <p class="post-excerpt">How to maintain a high-end digital presence while you are miles out of cell range deep in the timber.</p>
+                <a href="ghost-agent-effect.html" class="read-more">Read Entry</a>
+            </div>
+        </article>
+
+        <!-- Post 2 -->
+        <article class="post-card">
+            <img src="https://images.unsplash.com/photo-1444858291040-58f756a3bdd6?auto=format&fit=crop&q=80&w=600" class="post-img" alt="Sprawling land">
+            <div class="post-content">
+                <div class="post-meta">Design • May 4, 2026</div>
+                <h2 class="post-title">Acreage vs. Residential</h2>
+                <p class="post-excerpt">Why suburban listing templates fail rural properties, and how we design for the horizon instead.</p>
+                <a href="acreage-vs-residential.html" class="read-more">Read Entry</a>
+            </div>
+        </article>
+
+        <!-- Post 3 -->
+        <article class="post-card">
+            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&q=80&w=600" class="post-img" alt="Clean workspace">
+            <div class="post-content">
+                <div class="post-meta">Efficiency • May 4, 2026</div>
+                <h2 class="post-title">The 48-Hour Pipeline</h2>
+                <p class="post-excerpt">Stop waiting weeks for content. Discover how our digital studio transforms raw listings in 48 hours.</p>
+                <a href="turnaround-time.html" class="read-more">Read Entry</a>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p style="font-size: 10px; letter-spacing: 1px;">&copy; 2026 HOLLOW CREEK MEDIA. ALL RIGHTS RESERVED.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Method — Hollow Creek Media</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root { --bark: #1e1408; --moss: #3a5438; --sage: #7a9e78; --cream: #f5f0e6; --gold: #c4973e; --warm: #faf7f0; --text: #2a1e0a; --muted: #7a6e58; }
+        *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body { font-family: 'Jost', sans-serif; background: var(--warm); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+        
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; background: rgba(250,247,240,0.9); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(196,151,62,0.1); }
+        .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; letter-spacing: 0.1em; text-decoration: none; color: var(--bark); }
+        .nav-logo span { color: var(--moss); }
+        .nav-links { display: flex; gap: 30px; list-style: none; }
+        .nav-links a { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; color: var(--muted); transition: 0.3s; }
+        
+        .about-hero { padding: 180px 48px 80px; max-width: 900px; margin: 0 auto; text-align: center; }
+        .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; padding: 100px 48px; background: var(--bark); color: white; }
+        
+        .parallax-bg {
+            height: 450px;
+            background-image: url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=2000');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .reveal { opacity: 0; transform: translateY(30px); transition: 0.8s ease-out; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        
+        footer { background: var(--bark); color: rgba(255,255,255,0.5); padding: 80px 48px; text-align: center; }
+        footer a { color: white; text-decoration: none; margin: 0 15px; font-size: 10px; letter-spacing: 1px; }
+
+        @media (max-width: 768px) {
+    nav { 
+        padding: 15px 20px; 
+        flex-direction: column; 
+        gap: 10px;
+    }
+    .nav-links { 
+        display: flex !important; /* Forces the menu to show */
+        gap: 15px; 
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-links a {
+        font-size: 9px; /* Smaller text to fit on one line */
+    }
+    .container {
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+    h1 {
+        font-size: 36px; /* Prevents titles from breaking layout */
+    }
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="nav-logo">Hollow <span>Creek</span> Media</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">Method</a></li>
+            <li><a href="blog.html">Field Notes</a></li>
+            <li><a href="index.html#contact" style="background:var(--moss); color:white; padding:8px 15px;">Get Started</a></li>
+        </ul>
+    </nav>
+
+    <section class="about-hero reveal">
+        <h1 style="font-family:'Cormorant Garamond'; font-size: 52px; font-weight: 300; line-height: 1.2;">We believe rural real estate requires a <em>different</em> kind of storytelling.</h1>
+        <p style="margin-top: 40px; font-size: 18px; font-weight: 300; line-height: 1.8; color: var(--muted);">Hollow Creek Media was built for the agents who handle the acreage, the timber, and the small-town charm. We don't do "trendy" city marketing. We do quiet authority and lifestyle-first visual content.</p>
+    </section>
+
+    <section class="values-grid">
+        <div class="reveal">
+            <i class="ph ph-map-trifold" style="font-size: 32px; color: var(--gold); margin-bottom: 20px; display: block;"></i>
+            <h3 style="font-family:'Cormorant Garamond'; color: var(--gold); font-size: 24px; margin-bottom: 15px;">Acreage Specialists</h3>
+            <p style="font-size: 14px; opacity: 0.7;">We know the difference between a building lot and a homestead. Our content speaks to the specific needs of land buyers.</p>
+        </div>
+        <div class="reveal">
+            <i class="ph ph-handshake" style="font-size: 32px; color: var(--gold); margin-bottom: 20px; display: block;"></i>
+            <h3 style="font-family:'Cormorant Garamond'; color: var(--gold); font-size: 24px; margin-bottom: 15px;">Handshake Trust</h3>
+            <p style="font-size: 14px; opacity: 0.7;">No long-term contracts. We operate on a month-to-month basis, earning your business through results and reliability.</p>
+        </div>
+        <div class="reveal">
+            <i class="ph ph-leaf" style="font-size: 32px; color: var(--gold); margin-bottom: 20px; display: block;"></i>
+            <h3 style="font-family:'Cormorant Garamond'; color: var(--gold); font-size: 24px; margin-bottom: 15px;">Hands-Off Flow</h3>
+            <p style="font-size: 14px; opacity: 0.7;">You focus on the listings; we focus on the feed. Our systems are designed to save you hours every single week.</p>
+        </div>
+    </section>
+
+    <!-- Parallax Divider -->
+    <div class="parallax-bg"></div>
+
+    <!-- Process Section -->
+    <!-- Updated Process Section -->
+<section style="padding: 100px 48px; background: var(--warm);">
+    <div style="max-width: 1000px; margin: 0 auto;">
+        <h2 style="font-family:'Cormorant Garamond'; font-size: 38px; text-align: center; margin-bottom: 60px; font-weight: 300;">The <span style="color:var(--moss); font-style: italic;">Digital</span> Pipeline</h2>
+        
+        <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+            <div style="flex: 1; min-width: 250px; text-align: center; padding: 20px;">
+                <div style="width: 50px; height: 50px; border: 1px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-family:'Cormorant Garamond'; color: var(--gold);">1</div>
+                <h4 style="font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px;">Data Sync</h4>
+                <p style="font-size: 13px; color: var(--muted);">You send us your listing URL or a shared folder of your property photos and videos.</p>
+            </div>
+
+            <div style="flex: 1; min-width: 250px; text-align: center; padding: 20px;">
+                <div style="width: 50px; height: 50px; border: 1px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-family:'Cormorant Garamond'; color: var(--gold);">2</div>
+                <h4 style="font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px;">Studio Edit</h4>
+                <p style="font-size: 13px; color: var(--muted);">We curate the best assets, design high-end graphics, and write captions that speak to acreage buyers.</p>
+            </div>
+
+            <div style="flex: 1; min-width: 250px; text-align: center; padding: 20px;">
+                <div style="width: 50px; height: 50px; border: 1px solid var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-family:'Cormorant Garamond'; color: var(--gold);">3</div>
+                <h4 style="font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px;">The Rollout</h4>
+                <p style="font-size: 13px; color: var(--muted);">Depending on your tier, we deliver the ready-to-post files or schedule them directly to your accounts.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer>
+        <div style="margin-bottom: 30px;">
+            <a href="portfolio.html">PORTFOLIO</a>
+            <a href="about.html">METHOD</a>
+            <a href="privacy.html">PRIVACY</a>
+        </div>
+        <p style="font-size: 10px;">&copy; 2026 HOLLOW CREEK MEDIA. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>

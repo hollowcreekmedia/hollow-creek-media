@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — Hollow Creek Media</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root { --bark: #1e1408; --moss: #3a5438; --sage: #7a9e78; --cream: #f5f0e6; --gold: #c4973e; --warm: #faf7f0; --text: #2a1e0a; --muted: #7a6e58; }
+        *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Jost', sans-serif; background: var(--warm); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; background: rgba(250,247,240,0.9); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(196,151,62,0.1); }
+        .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; letter-spacing: 0.1em; text-decoration: none; color: var(--bark); }
+        .nav-logo span { color: var(--moss); }
+        .nav-links { display: flex; gap: 30px; list-style: none; }
+        .nav-links a { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; color: var(--muted); }
+        .portfolio-header { padding: 160px 48px 60px; text-align: center; background: var(--cream); }
+        .case-study { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; padding: 80px 48px; align-items: center; border-bottom: 1px solid #e0dbd1; }
+        .case-study:nth-child(even) { background: #fdfcf9; }
+        .case-img { background: var(--bark); aspect-ratio: 16/9; overflow: hidden; border-radius: 4px; }
+        .case-img img { width: 100%; height: 100%; object-fit: cover; }
+        .btn { display: inline-block; padding: 15px 35px; background: var(--moss); color: white; text-decoration: none; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; margin-top: 20px; }
+        footer { background: var(--bark); color: rgba(255,255,255,0.5); padding: 80px 48px; text-align: center; }
+        footer a { color: white; text-decoration: none; margin: 0 15px; font-size: 10px; }
+        @media (max-width: 768px) {
+    nav { 
+        padding: 15px 20px; 
+        flex-direction: column; 
+        gap: 10px;
+    }
+    .nav-links { 
+        display: flex !important; /* Forces the menu to show */
+        gap: 15px; 
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-links a {
+        font-size: 9px; /* Smaller text to fit on one line */
+    }
+    .container {
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+    h1 {
+        font-size: 36px; /* Prevents titles from breaking layout */
+    }
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="nav-logo">Hollow <span>Creek</span> Media</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">Method</a></li>
+            <li><a href="blog.html">Field Notes</a></li>
+            <li><a href="index.html#contact" style="background:var(--moss); color:white; padding:8px 15px;">Get Started</a></li>
+        </ul>
+    </nav>
+
+    <header class="portfolio-header">
+        <h1 style="font-family:'Cormorant Garamond'; font-size: 54px; font-weight: 300;">Digital <em>Showcases.</em></h1>
+        <p style="color: var(--muted); letter-spacing: 2px; text-transform: uppercase; font-size: 10px; margin-top: 20px;">Turning Raw Listing Data Into Premium Social Content</p>
+    </header>
+
+    <section class="case-study">
+        <div class="case-info">
+            <h2 style="font-family:'Cormorant Garamond'; font-size: 32px; margin-bottom: 20px;">The "Legacy Farm" Carousel</h2>
+            <p style="font-weight: 300; line-height: 1.8; color: var(--muted);">We took 8 high-resolution listing photos and a property description to create a high-engagement educational carousel designed for out-of-state investors.</p>
+            <ul style="margin-top: 20px; list-style: none; font-size: 13px; color: var(--moss);">
+                <li>• Narrative Captioning</li>
+                <li>• Digital Map Overlays</li>
+                <li>• Spec-Heavy Graphics</li>
+            </ul>
+        </div>
+        <div class="case-img">
+            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1000" alt="Rural Property Digital Design">
+        </div>
+    </section>
+
+    <section class="case-study">
+        <div class="case-info">
+            <h2 style="font-family:'Cormorant Garamond'; font-size: 32px; margin-bottom: 20px;">Short-Form Narrative Reels</h2>
+            <p style="font-weight: 300; line-height: 1.8; color: var(--muted);">Using agent-provided video clips and drone footage, we produced a series of "lifestyle-first" Reels that emphasize the slow living of the rural homestead.</p>
+        </div>
+        <div class="case-img">
+            <img src="https://images.unsplash.com/photo-1444858291040-58f756a3bdd6?auto=format&fit=crop&q=80&w=1000" alt="Rural Lifestyle Video Content">
+        </div>
+    </section>
+
+    <section style="padding: 100px 48px; text-align: center; background: var(--bark); color: white;">
+        <h2 style="font-family:'Cormorant Garamond'; font-size: 38px; margin-bottom: 20px;">Ready to automate your marketing?</h2>
+        <p style="opacity: 0.7; margin-bottom: 40px;">Send us your listing link; we'll handle the rest.</p>
+        <a href="index.html#contact" class="btn">View Investment Tiers</a>
+    </section>
+
+    <footer>
+        <p style="font-size: 10px;">&copy; 2026 HOLLOW CREEK MEDIA. ALL RIGHTS RESERVED.</p>
+    </footer>
+</body>
+</html>
