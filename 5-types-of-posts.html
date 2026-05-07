@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Most rural real estate agents post listings and nothing else. Here are the 5 post types that actually build trust, attract buyers, and keep you top of mind.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<title>5 Types of Posts Every Rural Agent Should Be Sharing — Hollow Creek Media</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bark:#1e1408;--moss:#3a5438;--sage:#7a9e78;--cream:#f5f0e6;--gold:#c4973e;--warm:#faf7f0;--text:#2a1e0a;--muted:#7a6e58;--border:rgba(196,151,62,0.15)}
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;background:var(--warm);color:var(--text);line-height:1.6;overflow-x:hidden}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 48px;background:rgba(250,247,240,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo{text-decoration:none;display:block}
+.nav-back{font-size:11px;font-weight:400;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color 0.2s}
+.nav-back:hover{color:var(--moss)}
+.nav-back::before{content:'←';font-size:13px}
+
+.hero{padding:140px 48px 80px;max-width:860px;margin:0 auto}
+.post-meta{display:flex;align-items:center;gap:16px;margin-bottom:32px;flex-wrap:wrap}
+.post-tag{font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;background:var(--moss);color:white;padding:4px 12px;border-radius:2px}
+.post-date{font-size:12px;font-weight:300;color:var(--muted);letter-spacing:0.08em}
+.post-read{font-size:12px;font-weight:300;color:var(--muted);letter-spacing:0.08em}
+.meta-dot{width:3px;height:3px;border-radius:50%;background:var(--border)}
+h1.post-title{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,60px);font-weight:300;line-height:1.1;color:var(--bark);margin-bottom:24px}
+h1.post-title em{font-style:italic;color:var(--moss)}
+.post-intro{font-size:16px;font-weight:300;color:var(--muted);line-height:1.8;max-width:640px;border-left:3px solid var(--gold);padding-left:20px;font-style:italic}
+
+.title-divider{display:flex;align-items:center;gap:16px;max-width:860px;margin:0 auto;padding:0 48px}
+.title-divider-line{flex:1;height:1px;background:var(--border)}
+.title-divider-icon{font-size:16px;opacity:0.4}
+
+.post-body{max-width:860px;margin:0 auto;padding:0 48px 120px;display:grid;grid-template-columns:1fr 260px;gap:64px;align-items:start}
+.post-content{padding-top:48px}
+
+.sidebar{padding-top:48px;position:sticky;top:90px}
+.sidebar-card{background:var(--bark);border-radius:8px;padding:28px 24px;margin-bottom:16px}
+.sidebar-label{font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.sidebar-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:white;line-height:1.3;margin-bottom:12px}
+.sidebar-body{font-size:12px;font-weight:300;color:rgba(255,255,255,0.5);line-height:1.7;margin-bottom:20px}
+.sidebar-btn{display:block;width:100%;background:var(--moss);color:white;text-decoration:none;text-align:center;padding:11px;border-radius:2px;font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;transition:background 0.2s}
+.sidebar-btn:hover{background:var(--sage)}
+
+.toc-card{background:white;border:1px solid rgba(196,151,62,0.2);border-radius:8px;padding:24px}
+.toc-label{font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.toc-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.toc-list a{font-size:12px;font-weight:400;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color 0.2s;line-height:1.4}
+.toc-list a:hover{color:var(--moss)}
+.toc-num{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:300;color:var(--gold);flex-shrink:0;width:16px}
+
+.post-content p{font-size:15px;font-weight:300;color:#3a2e1e;line-height:1.9;margin-bottom:24px}
+.post-content strong{color:var(--bark);font-weight:500}
+.post-content h2{font-family:'Cormorant Garamond',serif;font-size:13px;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin:56px 0 0}
+
+.post-type{margin:20px 0 40px;border-radius:8px;overflow:hidden;border:1px solid rgba(196,151,62,0.15)}
+.pt-header{display:flex;align-items:center;gap:16px;padding:20px 24px;background:var(--bark)}
+.pt-num{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;color:rgba(196,151,62,0.4);line-height:1;flex-shrink:0;width:40px}
+.pt-label{font-size:10px;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:3px}
+.pt-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:white}
+.pt-body{padding:24px;background:white}
+.pt-body p{font-size:14px;font-weight:300;color:#4a3e2e;line-height:1.8;margin-bottom:16px}
+.pt-body p:last-child{margin-bottom:0}
+
+.caption-example{background:var(--cream);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;padding:16px 18px;margin-top:16px}
+.caption-example-label{font-size:10px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.caption-example-text{font-size:13px;font-weight:300;color:var(--text);line-height:1.75;font-style:italic}
+.caption-example-tags{display:block;margin-top:6px;font-size:11px;color:#3a6bc4;font-style:normal}
+
+.why-works{display:inline-flex;align-items:center;gap:6px;background:#e8f0e8;color:var(--moss);font-size:11px;font-weight:500;padding:4px 12px;border-radius:20px;margin-top:12px}
+.why-works::before{content:'✓';font-size:10px}
+
+.pull-quote{margin:40px 0;padding:32px 36px;background:var(--bark);border-radius:4px;position:relative}
+.pull-quote::before{content:'"';font-family:'Cormorant Garamond',serif;font-size:120px;font-weight:300;color:rgba(196,151,62,0.15);position:absolute;top:-20px;left:24px;line-height:1}
+.pull-quote p{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;font-style:italic;color:white !important;line-height:1.5;position:relative;z-index:1;margin-bottom:0 !important}
+
+.summary-box{background:var(--cream);border:1px solid rgba(196,151,62,0.2);border-radius:8px;padding:28px 32px;margin:48px 0}
+.summary-box h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--bark);margin-bottom:16px}
+.summary-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.summary-list li{display:flex;align-items:flex-start;gap:10px;font-size:13px;font-weight:300;color:#4a3e2e;line-height:1.6}
+.summary-list li::before{content:'→';color:var(--gold);flex-shrink:0;margin-top:1px}
+
+.post-cta{background:var(--moss);border-radius:8px;padding:36px 32px;margin-top:48px;text-align:center}
+.post-cta h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:white;margin-bottom:10px}
+.post-cta p{font-size:13px;font-weight:300;color:rgba(255,255,255,0.6);margin-bottom:24px !important;line-height:1.7}
+.post-cta a{display:inline-block;background:var(--gold);color:var(--bark);text-decoration:none;padding:12px 32px;border-radius:2px;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;transition:background 0.2s}
+.post-cta a:hover{background:#d4a84e}
+
+.related{background:var(--cream);padding:80px 48px;border-top:1px solid var(--border)}
+.related-inner{max-width:860px;margin:0 auto}
+.related-label{font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.related-label::after{content:'';flex:1;height:1px;background:var(--border)}
+.related-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--bark);margin-bottom:40px}
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.related-card{background:white;border-radius:8px;overflow:hidden;border:1px solid var(--border);text-decoration:none;display:block;transition:transform 0.2s,box-shadow 0.2s}
+.related-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.08)}
+.related-card-img{height:140px;display:flex;align-items:center;justify-content:center;font-size:48px}
+.related-card-body{padding:20px}
+.related-card-tag{font-size:10px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--moss);margin-bottom:6px}
+.related-card-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;color:var(--bark);line-height:1.3}
+
+footer{background:var(--bark);padding:40px 48px;display:flex;align-items:center;justify-content:space-between}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:300;color:rgba(255,255,255,0.5);letter-spacing:0.06em}
+.footer-copy{font-size:11px;font-weight:300;color:rgba(255,255,255,0.25);letter-spacing:0.06em}
+
+@media(max-width:768px){
+  nav{padding:14px 20px}
+  .hero{padding:110px 20px 48px}
+  .post-body{grid-template-columns:1fr;padding:0 20px 80px;gap:0}
+  .sidebar{display:none}
+  .related{padding:56px 20px}
+  .related-grid{grid-template-columns:1fr}
+  footer{flex-direction:column;gap:8px;text-align:center;padding:24px 20px}
+  .title-divider{padding:0 20px}
+}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><img src="logo.svg" alt="Hollow Creek Media" style="height:30px;display:block;"></a>
+  <a href="blog.html" class="nav-back">Field Notes</a>
+</nav>
+
+<div class="hero">
+  <div class="post-meta">
+    <span class="post-tag">Strategy</span>
+    <span class="meta-dot"></span>
+    <span class="post-date">May 2026</span>
+    <span class="meta-dot"></span>
+    <span class="post-read">7 min read</span>
+  </div>
+  <h1 class="post-title reveal">5 Types of Posts Every Rural Agent Should Be Sharing <em>(But Isn't)</em></h1>
+  <p class="post-intro reveal">Most rural real estate agents post listings and nothing else. Here are the 5 post types that actually build trust, attract buyers, and keep you top of mind — without spending hours on your phone.</p>
+</div>
+
+<div class="title-divider"><div class="title-divider-line"></div><div class="title-divider-icon">🌿</div><div class="title-divider-line"></div></div>
+
+<div class="post-body">
+  <div class="post-content">
+
+    <p class="reveal">If you scroll through the Instagram or Facebook pages of most rural real estate agents, you'll see the same thing: a listing photo, the price, and maybe a phone number. Then nothing for three weeks. Then another listing.</p>
+
+    <p class="reveal">It's not that these agents don't care about their online presence. It's that nobody ever told them there was a better way — or that it doesn't have to take hours every week.</p>
+
+    <p class="reveal">The agents who consistently attract buyers and sellers online aren't just posting more listings. They're posting <strong>five different types of content</strong> that work together to build trust, tell a story, and keep them top of mind long before someone is ready to buy or sell.</p>
+
+    <p class="reveal">Here's exactly what those five types are — and a real example of each one.</p>
+
+    <div class="pull-quote reveal">
+      <p>The agents winning online aren't the ones posting the most listings. They're the ones telling the best stories about the land.</p>
+    </div>
+
+    <h2 class="reveal">Post Type 01</h2>
+    <div class="post-type reveal">
+      <div class="pt-header">
+        <div class="pt-num">1</div>
+        <div class="pt-title-wrap">
+          <div class="pt-label">The Foundation</div>
+          <div class="pt-name">The Property Story Post</div>
+        </div>
+      </div>
+      <div class="pt-body">
+        <p>Yes, listing posts belong here — but not the way most agents do them. The mistake is treating a listing post like an MLS entry: address, square footage, price, phone number. Done.</p>
+        <p>What actually works is treating each listing like a story. Every piece of rural land has one. The creek that runs through the back pasture. The old oak at the fence line that's been there for 80 years. The fact that on a clear night you can see more stars than most people see in a lifetime.</p>
+        <p><strong>Lead with the feeling, not the specs.</strong> Buyers aren't scrolling Facebook looking for square footage — they're looking for something that makes them feel something. Give them that first, then follow with the details.</p>
+        <div class="caption-example">
+          <div class="caption-example-label">Example Caption</div>
+          <div class="caption-example-text">
+            There's a spring-fed creek that runs along the back of this property year-round. The kind you can hear from the porch on a quiet morning.<br><br>
+            62 acres. 3-bed farmhouse, move-in ready. Fenced pasture, detached barn, private road. Crossville, Tennessee — $449,000.<br><br>
+            DM me if you want to walk it. 🌿
+            <span class="caption-example-tags">#tnrealtor #crossvilletn #landforsale #countrylife #farmhouseforsale</span>
+          </div>
+        </div>
+        <div class="why-works">Leads with emotion, follows with facts — the order matters</div>
+      </div>
+    </div>
+
+    <h2 class="reveal">Post Type 02</h2>
+    <div class="post-type reveal">
+      <div class="pt-header">
+        <div class="pt-num">2</div>
+        <div class="pt-title-wrap">
+          <div class="pt-label">The Trust Builder</div>
+          <div class="pt-name">The Local Market Update</div>
+        </div>
+      </div>
+      <div class="pt-body">
+        <p>This is the post type most rural agents completely skip — and one of the most powerful things you can share. A simple market update positions you as the expert in your area without you having to say "I'm an expert" even once.</p>
+        <p>It doesn't need to be complicated. Something like: "Land in Cumberland County is selling 30% faster than this time last year. If you've been thinking about listing, here's what that means for you." Two sentences of real, on-the-ground information is worth more than any sales pitch.</p>
+        <p><strong>Where do you get the data?</strong> Your MLS, your broker's monthly report, or even just what you're seeing in the field. "I've had three offers come in above asking price this month on rural properties under $400K" is a legitimate market update that no website can give people. It comes from you being there.</p>
+        <div class="caption-example">
+          <div class="caption-example-label">Example Caption</div>
+          <div class="caption-example-text">
+            Something I'm seeing right now in the Mountain Home market: rural properties with creek frontage or hunting land are going under contract faster than anything else. Buyers from out of state are specifically looking for those features.<br><br>
+            If you have acreage with either — and you've been thinking about selling — now is genuinely a good time to talk. DM me and I'll tell you what your land is actually worth.
+            <span class="caption-example-tags">#arkansasrealtor #mountainhomear #ruralrealestate #landmarket #ozarks</span>
+          </div>
+        </div>
+        <div class="why-works">Demonstrates expertise without bragging — lets the information do the selling</div>
+      </div>
+    </div>
+
+    <h2 class="reveal">Post Type 03</h2>
+    <div class="post-type reveal">
+      <div class="pt-header">
+        <div class="pt-num">3</div>
+        <div class="pt-title-wrap">
+          <div class="pt-label">The Connection Post</div>
+          <div class="pt-name">The "Why I Love This Place" Post</div>
+        </div>
+      </div>
+      <div class="pt-body">
+        <p>This is the most underused post type in rural real estate — and consistently one of the highest-performing. People don't just buy land. They buy into a place, a lifestyle, a community. And no one can sell that better than someone who actually lives there.</p>
+        <p>Write about why your area is special. Not in a Chamber of Commerce way — in a real, personal way. The local diner that's been open since 1962. The fact that you know your neighbors' names. The way the ridgeline looks at sunset in October. These posts get shared by locals, seen by people who grew up there and moved away, and bookmarked by people who dream about living somewhere quieter.</p>
+        <p><strong>This is the one post type that no out-of-town agent can replicate.</strong> It's yours alone. Use it.</p>
+        <div class="caption-example">
+          <div class="caption-example-label">Example Caption</div>
+          <div class="caption-example-text">
+            People always ask me why Somerset.<br><br>
+            I tell them: it's the kind of place where you can have a lake house, a few acres, and still be 20 minutes from everything you actually need. Where your kids can grow up with space to roam. Where people still wave when they pass you on the road.<br><br>
+            I've been selling property here for 15 years and I still feel lucky to be here. 🏡
+            <span class="caption-example-tags">#somersetky #lakecumberland #kyrealtor #ruralkentucky #smalltownliving</span>
+          </div>
+        </div>
+        <div class="why-works">Builds genuine connection — gets shared far beyond your followers</div>
+      </div>
+    </div>
+
+    <h2 class="reveal">Post Type 04</h2>
+    <div class="post-type reveal">
+      <div class="pt-header">
+        <div class="pt-num">4</div>
+        <div class="pt-title-wrap">
+          <div class="pt-label">The Social Proof Post</div>
+          <div class="pt-name">The Client Win Post</div>
+        </div>
+      </div>
+      <div class="pt-body">
+        <p>A sold post is good. A sold post with a story is great. A sold post with a real quote from a happy client is the most powerful content you can put on social media — because it's not you saying you're good. It's someone else saying it.</p>
+        <p>After every closing, ask your client if they'd mind sharing a sentence or two about the experience. Most people are genuinely happy to do it, especially if you make it easy. "Hey — would it be okay if I shared a quick quote from you on my page? Nothing formal, just something like what you told me after the closing."</p>
+        <p><strong>You don't need a long testimonial.</strong> One sentence — real, specific, and in the client's own words — is worth more than a paragraph you wrote yourself.</p>
+        <div class="caption-example">
+          <div class="caption-example-label">Example Caption</div>
+          <div class="caption-example-text">
+            "She found us exactly what we'd been looking for — 40 acres with a creek and room to breathe. We couldn't believe how smooth the whole process was." — The Henderson Family<br><br>
+            This is the one that makes this job worth doing. A family's dream property, a smooth closing, and a new chapter on a piece of land they can call their own. 🤍
+            <span class="caption-example-tags">#kyrealtor #somersetky #justclosed #clientlove #lakecumberland</span>
+          </div>
+        </div>
+        <div class="why-works">Real words from real clients — the most credible thing you can share</div>
+      </div>
+    </div>
+
+    <h2 class="reveal">Post Type 05</h2>
+    <div class="post-type reveal">
+      <div class="pt-header">
+        <div class="pt-num">5</div>
+        <div class="pt-title-wrap">
+          <div class="pt-label">The Long Game Post</div>
+          <div class="pt-name">The Personal Introduction Post</div>
+        </div>
+      </div>
+      <div class="pt-body">
+        <p>At least once a month, show your face and tell your story. Not your resume — your actual story. Why you got into rural real estate. Where you grew up. What you love about the land you sell. What you do on a Saturday morning.</p>
+        <p>Rural buyers and sellers are trusting you with some of the most significant decisions of their lives. They want to know who you are before they pick up the phone. A personal post that feels real gives them permission to reach out — because they already feel like they know you a little.</p>
+        <p><strong>The agents who do this consistently are the ones whose phones ring most.</strong> Not because they have the most followers, but because the people who follow them feel a genuine connection. That connection converts into clients at a far higher rate than any listing post ever will.</p>
+        <div class="caption-example">
+          <div class="caption-example-label">Example Caption</div>
+          <div class="caption-example-text">
+            I grew up on a cattle farm outside of Crossville. Spent summers learning every back road in Cumberland County before I had a driver's license.<br><br>
+            So when I became a real estate agent 12 years ago, rural land wasn't a niche I chose. It was the only thing that ever made sense to me.<br><br>
+            If you're looking for someone who knows this land — not just the listings, but the land itself — I'd love to talk. 🌾
+            <span class="caption-example-tags">#tnrealtor #crossvilletn #ruralrealtor #meetyouragent #smalltownrealtor</span>
+          </div>
+        </div>
+        <div class="why-works">Humanizes your brand and builds the trust that actually drives phone calls</div>
+      </div>
+    </div>
+
+    <div class="summary-box reveal">
+      <h3>The Takeaway</h3>
+      <ul class="summary-list">
+        <li><strong>Property Story Post</strong> — Lead with feeling, follow with facts. Every listing has a story worth telling.</li>
+        <li><strong>Local Market Update</strong> — Share what you're seeing on the ground. No one else can.</li>
+        <li><strong>Why I Love This Place Post</strong> — Sell the lifestyle, the community, the place itself.</li>
+        <li><strong>Client Win Post</strong> — Let your clients speak for you. One real quote beats any caption you write yourself.</li>
+        <li><strong>Personal Introduction Post</strong> — Show up as a human being. People hire people, not logos.</li>
+      </ul>
+    </div>
+
+    <p class="reveal">You don't need to post every day. You don't need a ring light or a professional photographer. You need these five types of content, rotating consistently, month after month. That's what builds an online presence that actually works in rural real estate.</p>
+
+    <p class="reveal">And if creating all five types every month feels overwhelming — that's exactly what we do at Hollow Creek Media. We handle all of it, so you can focus on what you do best: knowing the land and closing the deals.</p>
+
+    <div class="post-cta reveal">
+      <h3>Want us to create all 5 for you?</h3>
+      <p>We build done-for-you monthly content packages for rural real estate agents — all 5 post types, every month, delivered ready to post.</p>
+      <a href="index.html#contact">Get Started Today →</a>
+    </div>
+
+  </div>
+
+  <div class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-label">Done For You</div>
+      <div class="sidebar-title">We create all 5 post types every month</div>
+      <div class="sidebar-body">Custom content for your brand, your market, your listings. Month-to-month, no contract.</div>
+      <a href="index.html#contact" class="sidebar-btn">View Packages</a>
+    </div>
+    <div class="toc-card">
+      <div class="toc-label">In This Post</div>
+      <ul class="toc-list">
+        <li><a href="#"><span class="toc-num">1</span>The Property Story Post</a></li>
+        <li><a href="#"><span class="toc-num">2</span>The Local Market Update</a></li>
+        <li><a href="#"><span class="toc-num">3</span>Why I Love This Place</a></li>
+        <li><a href="#"><span class="toc-num">4</span>The Client Win Post</a></li>
+        <li><a href="#"><span class="toc-num">5</span>The Personal Intro Post</a></li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<div class="related">
+  <div class="related-inner">
+    <div class="related-label">More Field Notes</div>
+    <div class="related-title">Keep reading</div>
+    <div class="related-grid">
+      <a href="ghost-agent-effect.html" class="related-card">
+        <div class="related-card-img" style="background:#1e2e1e">🌲</div>
+        <div class="related-card-body">
+          <div class="related-card-tag">Strategy</div>
+          <div class="related-card-title">The Ghost Agent Effect</div>
+        </div>
+      </a>
+      <a href="acreage-vs-residential.html" class="related-card">
+        <div class="related-card-img" style="background:#2a1e0e">🏡</div>
+        <div class="related-card-body">
+          <div class="related-card-tag">Design</div>
+          <div class="related-card-title">Acreage vs. Residential</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Hollow Creek Media</div>
+  <div class="footer-copy">&copy; 2026 Hollow Creek Media &middot; All rights reserved</div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible') });
+}, {threshold:0.08, rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+window.addEventListener('scroll', () => {
+  document.querySelector('nav').style.boxShadow = window.scrollY > 20 ? '0 2px 20px rgba(0,0,0,0.07)' : 'none';
+});
+</script>
+</body>
+</html>
