@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Transparent pricing for rural real estate social media management. Three tiers from DIY content to full-service with paid ads.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Pricing Plans — Hollow Creek Media</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root { --bark: #1e1408; --moss: #3a5438; --sage: #7a9e78; --cream: #f5f0e6; --gold: #c4973e; --warm: #faf7f0; --text: #2a1e0a; --muted: #7a6e58; }
+        *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Jost', sans-serif; background: var(--warm); color: var(--text); line-height: 1.6; overflow-x: hidden; }
+
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; background: rgba(250,247,240,0.9); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(196,151,62,0.1); }
+        .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; letter-spacing: 0.1em; text-decoration: none; color: var(--bark); }
+        .nav-logo span { color: var(--moss); }
+        .nav-links { display: flex; gap: 30px; list-style: none; }
+        .nav-links a { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; color: var(--muted); transition: 0.3s; }
+        .nav-links a:hover { color: var(--moss); }
+
+        .hero { padding: 140px 48px 60px; background: var(--cream); text-align: center; }
+        .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(42px, 6vw, 72px); font-weight: 300; margin-bottom: 20px; }
+        .hero h1 em { font-style: italic; color: var(--moss); }
+        .hero p { font-size: 18px; color: var(--muted); max-width: 700px; margin: 0 auto; }
+
+        .content { max-width: 900px; margin: 80px auto; padding: 0 48px; }
+
+        h2 { font-family: 'Cormorant Garamond', serif; font-size: 42px; font-weight: 300; margin: 60px 0 30px; }
+        h2 em { font-style: italic; color: var(--moss); }
+        h3 { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 300; margin: 40px 0 20px; }
+        h4 { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 400; margin: 30px 0 12px; }
+
+        p { margin-bottom: 16px; font-weight: 300; }
+
+        .tier-box { background: white; border: 1px solid rgba(196,151,62,0.2); border-radius: 8px; padding: 40px; margin: 40px 0; }
+        .tier-box h3 { margin-top: 0; }
+        .tier-price { font-family: 'Cormorant Garamond', serif; font-size: 32px; color: var(--gold); margin: 12px 0 20px; }
+        .tier-description { color: var(--muted); font-style: italic; margin-bottom: 24px; font-size: 15px; }
+
+        ul { list-style: none; padding: 0; }
+        li { padding-left: 24px; position: relative; margin-bottom: 12px; }
+        li::before { content: '✦'; position: absolute; left: 0; color: var(--gold); }
+
+        .comparison-table { width: 100%; border-collapse: collapse; margin: 40px 0; }
+        .comparison-table th, .comparison-table td { padding: 16px; text-align: left; border-bottom: 1px solid rgba(0,0,0,0.08); }
+        .comparison-table th { background: var(--cream); font-weight: 500; }
+        .comparison-table tr:hover { background: rgba(196,151,62,0.02); }
+
+        .sample-campaign { background: var(--cream); padding: 32px; border-radius: 8px; margin: 40px 0; }
+        .sample-campaign h4 { margin-top: 0; }
+
+        .real-talk { background: rgba(196,151,62,0.08); border-left: 4px solid var(--gold); padding: 24px; margin: 40px 0; border-radius: 0 4px 4px 0; }
+        .real-talk strong { color: var(--bark); }
+
+        .btn { display: inline-block; padding: 15px 35px; background: var(--moss); color: white; text-decoration: none; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; border: none; cursor: pointer; transition: 0.3s; }
+        .btn:hover { background: var(--bark); }
+
+        footer { background: var(--bark); color: rgba(255,255,255,0.5); padding: 80px 48px; text-align: center; margin-top: 120px; }
+        footer a { color: white; text-decoration: none; margin: 0 15px; font-size: 10px; letter-spacing: 1px; }
+
+        @media (max-width: 768px) {
+            nav { padding: 15px 20px; flex-direction: column; gap: 15px; }
+            .nav-links { gap: 10px; flex-wrap: wrap; justify-content: center; }
+            .nav-links a { font-size: 9px; }
+            .content { padding: 0 20px; }
+            .tier-box { padding: 24px; }
+            .comparison-table th, .comparison-table td { padding: 12px; font-size: 14px; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="nav-logo"><img src="logo.svg" alt="Hollow Creek Media" style="height:32px;display:block;"></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">Method</a></li>
+            <li><a href="blog.html">Field Notes</a></li>
+            <li><a href="#contact" style="background:var(--moss); color:white; padding:8px 15px;">Get Started</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <h1>Pricing That <em>Works.</em></h1>
+        <p>Three tiers designed for different goals. No contracts. Transparent math. Real results.</p>
+    </section>
+
+    <section class="content">
+        <h2>The Three Paths to Social Media <em>Success</em></h2>
+
+        <div class="tier-box">
+            <h3>✦ The Seedling</h3>
+            <div class="tier-price">$299/month</div>
+            <div class="tier-description">For agents who want professional content, but control the posting themselves</div>
+
+            <h4>You Get:</h4>
+            <ul>
+                <li>12 branded graphics + captions per month</li>
+                <li>Ready-to-post files (Instagram & Facebook formatted)</li>
+                <li>48-hour turnaround on new listings</li>
+                <li>One round of revisions included</li>
+                <li>Month-to-month, no contract</li>
+            </ul>
+
+            <h4 style="margin-top: 32px;">The Results:</h4>
+            <ul>
+                <li><strong>Your agent effort:</strong> High (you post everything)</li>
+                <li><strong>Lead generation:</strong> Moderate (depends on your posting consistency)</li>
+                <li><strong>Best for:</strong> Agents comfortable managing their own social media</li>
+                <li><strong>Typical inquiries/month:</strong> 2-5 (depends on your posting frequency)</li>
+            </ul>
+
+            <div class="real-talk">
+                <strong>Real Talk:</strong> Great content still requires consistent posting to work. If you post these 2x per month, you'll see minimal results. If you're disciplined and post every week, you'll see better engagement.
+            </div>
+        </div>
+
+        <div class="tier-box" style="border-color: var(--gold); background: rgba(196,151,62,0.03);">
+            <div style="font-size: 11px; color: var(--gold); margin-bottom: 10px; letter-spacing: 2px; text-transform: uppercase;">⭐ Most Popular</div>
+            <h3>✦ The Homestead</h3>
+            <div class="tier-price">$599/month</div>
+            <div class="tier-description">For agents who want hands-off social media management (without ads)</div>
+
+            <h4>You Get:</h4>
+            <ul>
+                <li>15 custom posts + captions per month</li>
+                <li>2 short-form Reels (high-engagement video content)</li>
+                <li>Full posting schedule — we post for you</li>
+                <li>Instagram & Facebook managed by us</li>
+                <li>Monthly content calendar</li>
+                <li>Account approval before everything goes live</li>
+                <li>One round of revisions included</li>
+                <li>Month-to-month, no contract</li>
+            </ul>
+
+            <h4 style="margin-top: 32px;">The Results:</h4>
+            <ul>
+                <li><strong>Your agent effort:</strong> Minimal (approve content, share when appropriate)</li>
+                <li><strong>Lead generation:</strong> Strong (consistent, optimized posting drives engagement)</li>
+                <li><strong>Best for:</strong> Agents ready for hands-off management</li>
+                <li><strong>Typical inquiries/month:</strong> 8-15 per active listing</li>
+                <li><strong>Cost per inquiry:</strong> $40-75</li>
+            </ul>
+
+            <h4>The Math:</h4>
+            <ul>
+                <li>15 posts/month + 2 Reels = consistent presence that builds reach</li>
+                <li>Organic algorithm boost from video content (Reels)</li>
+                <li>Steady follower growth as consistent content builds audience</li>
+                <li><strong>Estimated ROI:</strong> 1-2 extra sales per listing = $3-7K commission per listing vs. $600 investment</li>
+            </ul>
+
+            <div class="real-talk">
+                <strong>Why This Tier Works:</strong> Agents see results because we handle the execution. The consistency itself is the lead generator. You show up in agents' & buyers' feeds regularly, building relationship and credibility.
+            </div>
+        </div>
+
+        <div class="tier-box">
+            <h3>✦ The Acreage</h3>
+            <div class="tier-price">$999/month</div>
+            <div class="tier-description">For high-volume agents & brokerages ready for full-scale growth (with paid advertising)</div>
+
+            <h4>You Get:</h4>
+            <p style="margin-bottom: 12px;">Everything in The Homestead, PLUS:</p>
+            <ul>
+                <li>Facebook & Instagram ad campaigns (we design & manage)</li>
+                <li>Ad spend management (client provides budget; we allocate strategically)</li>
+                <li>Monthly analytics report showing reach, clicks, inquiries</li>
+                <li>Priority 24-hour turnaround on new listings</li>
+                <li>Dedicated account management (direct contact person)</li>
+                <li>Month-to-month, no contract</li>
+            </ul>
+
+            <h4 style="margin-top: 32px;">The Results:</h4>
+            <ul>
+                <li><strong>Your agent effort:</strong> Minimal (you focus on closing, we handle marketing)</li>
+                <li><strong>Lead generation:</strong> Exceptional (organic + paid reach)</li>
+                <li><strong>Best for:</strong> Agents with multiple listings or brokerage teams</li>
+                <li><strong>Typical inquiries/month:</strong> 15-30 per active listing (with ads)</li>
+                <li><strong>Cost per inquiry:</strong> $30-50 (lower because ads boost efficiency)</li>
+                <li><strong>Typical conversion:</strong> 1-3 offers per listing</li>
+            </ul>
+
+            <h4>How Ads Multiply Results:</h4>
+            <table class="comparison-table">
+                <tr>
+                    <th>Metric</th>
+                    <th>The Homestead (No Ads)</th>
+                    <th>The Acreage (With Ads)</th>
+                </tr>
+                <tr>
+                    <td>Monthly Impressions</td>
+                    <td>5,000-8,000</td>
+                    <td>12,000-20,000</td>
+                </tr>
+                <tr>
+                    <td>Clicks to Listing</td>
+                    <td>100-150</td>
+                    <td>250-400</td>
+                </tr>
+                <tr>
+                    <td>Inquiries Generated</td>
+                    <td>8-15</td>
+                    <td>15-30</td>
+                </tr>
+                <tr>
+                    <td>Tours Booked</td>
+                    <td>1-2</td>
+                    <td>3-5</td>
+                </tr>
+                <tr>
+                    <td>Offers/Month</td>
+                    <td>0.5-1</td>
+                    <td>1-3</td>
+                </tr>
+            </table>
+
+            <h4>The Math:</h4>
+            <ul>
+                <li>Let's say $400/month ad budget (client funds)</li>
+                <li>Homestead base: $599</li>
+                <li>Total invested: $999</li>
+                <li>Average listing value: $500K+</li>
+                <li>Commission: $15-25K per sale</li>
+                <li>1-3 extra sales per listing = <strong>$15-75K gross revenue</strong></li>
+                <li><strong>Your investment: $999/month = ROI of 15-75x</strong></li>
+            </ul>
+
+            <div class="real-talk">
+                <strong>Why Ads Change Everything:</strong> Organic reach (Homestead) gets you to people already looking. Ads get you in front of people actively searching, boosting inquiries 2-3x.
+            </div>
+        </div>
+
+        <h2>The Real <em>Difference</em></h2>
+
+        <h3>What Drives Results at Each Tier</h3>
+        <div style="background: var(--cream); padding: 32px; border-radius: 8px; font-family: 'Cormorant Garamond', serif; font-size: 18px; line-height: 1.8;">
+            <p><strong>The Seedling:</strong><br>You → Quality Content + Your Effort = Some Results<br><span style="color: var(--muted); font-size: 14px;">(Good content, but needs consistent pushing)</span></p>
+            <p style="margin-top: 20px;"><strong>The Homestead:</strong><br>Us → Consistent Posts + Professional Management = Strong Results<br><span style="color: var(--muted); font-size: 14px;">(We handle the consistency; the reach builds naturally)</span></p>
+            <p style="margin-top: 20px;"><strong>The Acreage:</strong><br>Us → Content + Posting + Ads + Analytics = Exceptional Results<br><span style="color: var(--muted); font-size: 14px;">(Maximum reach to maximum buyers = maximum inquiries)</span></p>
+        </div>
+
+        <h2>Sample Campaign: 30-Day Farm <em>Listing</em></h2>
+
+        <div class="sample-campaign">
+            <h4 style="margin-top: 0;">The Homestead Approach (15 posts + 2 Reels)</h4>
+            <ul style="margin-bottom: 24px;">
+                <li><strong>Week 1:</strong> Launch the listing (hero photo post + details carousel)</li>
+                <li><strong>Week 2:</strong> Video Reel + property features</li>
+                <li><strong>Week 3:</strong> Lifestyle/educational + engagement</li>
+                <li><strong>Week 4:</strong> Final push + urgency</li>
+            </ul>
+            <p><strong>Expected Results:</strong></p>
+            <ul>
+                <li>5,000-8,000 impressions</li>
+                <li>100-150 clicks to listing</li>
+                <li>8-12 inquiries</li>
+                <li>1-2 property tours</li>
+                <li>0.5-1 offer</li>
+            </ul>
+        </div>
+
+        <div class="sample-campaign">
+            <h4 style="margin-top: 0;">The Acreage Approach (15 posts + 2 Reels + $400 ads)</h4>
+            <ul style="margin-bottom: 24px;">
+                <li>Same content as Homestead</li>
+                <li>PLUS: Strategic ad spend targeting local buyers</li>
+                <li>Ads boost hero post to 5,000+ people in target area</li>
+                <li>Retargeting ads to people who clicked but didn't inquire</li>
+            </ul>
+            <p><strong>Expected Results:</strong></p>
+            <ul>
+                <li>12,000-18,000 impressions</li>
+                <li>250-350 clicks to listing</li>
+                <li>15-25 inquiries</li>
+                <li>3-4 property tours</li>
+                <li>1-2 offers</li>
+            </ul>
+            <p style="margin-top: 20px; color: var(--muted); font-style: italic;"><strong>The Difference:</strong> Homestead gets you a lead or two. Acreage gets you multiple competing offers.</p>
+        </div>
+
+        <h2>Which Tier Is Right for <em>You?</em></h2>
+
+        <h3>Choose Seedling If:</h3>
+        <ul>
+            <li>You love managing social media</li>
+            <li>You have time to post 2-3x per week</li>
+            <li>You have a small number of listings</li>
+            <li>You're testing before committing to management</li>
+        </ul>
+
+        <h3>Choose Homestead If:</h3>
+        <ul>
+            <li>You want hands-off management (most agents do)</li>
+            <li>You have 2-5 active listings</li>
+            <li>You want consistent lead generation without ads</li>
+            <li>You trust us to post on your schedule</li>
+            <li><strong>This is our most popular choice for a reason</strong></li>
+        </ul>
+
+        <h3>Choose Acreage If:</h3>
+        <ul>
+            <li>You're a high-volume agent or brokerage</li>
+            <li>You have 5+ active listings</li>
+            <li>You want maximum reach and lead generation</li>
+            <li>You have budget for paid advertising ($300-500/month)</li>
+            <li>You want dedicated account management</li>
+            <li>You want detailed analytics on what's working</li>
+        </ul>
+
+        <h2>What You Actually Need to <em>Win</em></h2>
+
+        <p><strong>No matter which tier you choose:</strong></p>
+        <ul>
+            <li><strong>Great Property Photos</strong> — This is 80% of success. Better photos = more clicks</li>
+            <li><strong>Approval Availability</strong> — Content goes through 1 approval round before posting</li>
+            <li><strong>Response to Inquiries</strong> — We'll drive the leads; you need to follow up quickly</li>
+            <li><strong>30-Day Commitment</strong> — Give it a month. Real momentum builds over weeks, not days</li>
+        </ul>
+
+        <p style="margin-top: 32px; margin-bottom: 32px;"><strong>What We Handle:</strong></p>
+        <ul>
+            <li>Strategy & content creation</li>
+            <li>Posting schedule & consistency</li>
+            <li>Account management</li>
+            <li>Engagement (comments, DMs)</li>
+            <li>Ad management (Acreage only)</li>
+            <li>Analytics & reporting (Acreage only)</li>
+        </ul>
+
+        <h2>The Bottom <em>Line</em></h2>
+
+        <div class="real-talk" style="background: rgba(58,84,56,0.08); border-left-color: var(--moss);">
+            <p><strong>Hollow Creek Media doesn't sell posts. We sell leads.</strong></p>
+            <ul style="margin-top: 16px;">
+                <li><strong>Seedling:</strong> DIY content delivery ($299)</li>
+                <li><strong>Homestead:</strong> Hands-off lead generation ($599)</li>
+                <li><strong>Acreage:</strong> Full-service growth & advertising ($999)</li>
+            </ul>
+            <p style="margin-top: 16px;">All come with month-to-month terms, no contracts, and honest conversations about what's working.</p>
+        </div>
+
+        <h2>Ready to Get <em>Started?</em></h2>
+
+        <div class="sample-campaign">
+            <h4 style="margin-top: 0;">Typical first client experience:</h4>
+            <ul>
+                <li><strong>Day 1:</strong> Get onboarded, provide listing details + photos</li>
+                <li><strong>Days 2-3:</strong> Approve your first batch of content</li>
+                <li><strong>Day 4:</strong> Content starts posting to your accounts</li>
+                <li><strong>Week 2:</strong> First inquiries coming in</li>
+                <li><strong>Week 4:</strong> You'll know if it's working based on results</li>
+            </ul>
+            <p style="margin-top: 24px;"><strong>No contracts. Cancel anytime with 30 days' notice.</strong></p>
+            <p>Most agents see results they're happy with in the first 30 days. Many stay for years because the lead flow doesn't stop.</p>
+        </div>
+
+        <div style="text-align: center; margin: 60px 0;">
+            <a href="index.html#contact" class="btn">Get Started Today</a>
+        </div>
+
+    </section>
+
+    <footer>
+        <div style="margin-bottom: 30px;">
+            <a href="portfolio.html">PORTFOLIO</a>
+            <a href="samples.html">SAMPLES</a>
+            <a href="pricing.html">PRICING</a>
+            <a href="about.html">METHOD</a>
+            <a href="blog.html">FIELD NOTES</a>
+        </div>
+        <p style="margin-bottom: 15px;"><a href="mailto:hollowcreek.media@outlook.com" style="color:rgba(255,255,255,0.6); font-size:11px; letter-spacing:1px; text-decoration:none;">hollowcreek.media@outlook.com</a></p>
+        <p style="font-size: 10px;">&copy; 2026 HOLLOW CREEK MEDIA. ALL RIGHTS RESERVED.</p>
+    </footer>
+</body>
+</html>

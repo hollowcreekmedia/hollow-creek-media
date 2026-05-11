@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="See examples of the social media content we create for rural real estate agents.">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Sample Content | Hollow Creek Media</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root { --bark: #1e1408; --moss: #3a5438; --cream: #f5f0e6; --warm: #faf7f0; --text: #2a1e0a; --muted: #7a6e58; --gold: #c4973e; }
+        *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Jost', sans-serif; background: var(--warm); color: var(--text); line-height: 1.6; }
+
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; background: rgba(250,247,240,0.9); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(196,151,62,0.1); }
+        .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 20px; letter-spacing: 0.1em; text-decoration: none; color: var(--bark); }
+        .nav-links { display: flex; gap: 30px; list-style: none; }
+        .nav-links a { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; color: var(--muted); transition: 0.3s; }
+        .nav-links a:hover { color: var(--moss); }
+
+        .header { text-align: center; padding: 120px 48px 60px; background: var(--cream); }
+        .header h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(42px, 6vw, 72px); font-weight: 300; margin-bottom: 20px; }
+        .header h1 em { font-style: italic; color: var(--moss); }
+        .header p { font-size: 18px; color: var(--muted); max-width: 700px; margin: 0 auto; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 80px 48px; }
+
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 80px; }
+
+        .post { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .post:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+
+        .post-image { width: 100%; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 3rem; color: white; text-align: center; padding: 20px; font-weight: 300; line-height: 1.3; font-family: 'Cormorant Garamond', serif; font-size: 32px; }
+
+        .post-image.farm { background: linear-gradient(135deg, #8b7355 0%, #d4a574 100%); }
+        .post-image.land { background: linear-gradient(135deg, #2d5016 0%, #7cb342 100%); }
+        .post-image.building { background: linear-gradient(135deg, #c41c3b 0%, #8b0000 100%); }
+        .post-image.acreage { background: linear-gradient(135deg, #1a472a 0%, #4a7c59 100%); }
+        .post-image.pasture { background: linear-gradient(135deg, #d4a373 0%, #8b6914 100%); }
+        .post-image.residential { background: linear-gradient(135deg, #8b4513 0%, #daa520 100%); }
+
+        .post-content { padding: 24px; }
+
+        .post-type { font-size: 10px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--muted); margin-bottom: 10px; font-weight: 600; }
+
+        .post-caption { font-size: 15px; line-height: 1.6; color: var(--text); margin-bottom: 16px; }
+        .post-caption strong { color: var(--bark); font-weight: 600; }
+
+        .post-hashtags { font-size: 13px; color: #0095f6; line-height: 1.8; word-break: break-word; }
+
+        .note { background: rgba(196,151,62,0.08); border-left: 4px solid var(--gold); padding: 28px; margin: 80px 0; border-radius: 0 4px 4px 0; }
+        .note strong { color: var(--bark); }
+
+        .cta { background: var(--moss); color: white; padding: 48px; text-align: center; border-radius: 8px; }
+        .cta h2 { color: white; margin-top: 0; }
+        .cta p { color: rgba(255,255,255,0.8); margin-bottom: 24px; }
+        .btn { display: inline-block; padding: 15px 35px; background: var(--gold); color: var(--bark); text-decoration: none; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 600; transition: 0.3s; }
+        .btn:hover { background: #d4a84e; }
+
+        footer { background: var(--bark); color: rgba(255,255,255,0.5); padding: 80px 48px; text-align: center; }
+        footer a { color: white; text-decoration: none; margin: 0 15px; font-size: 10px; letter-spacing: 1px; }
+
+        @media (max-width: 768px) {
+            nav { padding: 15px 20px; flex-direction: column; gap: 15px; }
+            .nav-links { gap: 10px; flex-wrap: wrap; justify-content: center; }
+            .nav-links a { font-size: 9px; }
+            .header { padding: 80px 20px 40px; }
+            .container { padding: 60px 20px; }
+            .gallery { gap: 20px; }
+            .note { padding: 20px; margin: 40px 0; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="nav-logo"><img src="logo.svg" alt="Hollow Creek Media" style="height:32px;display:block;"></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="samples.html" style="color: var(--moss);">Samples</a></li>
+            <li><a href="about.html">Method</a></li>
+            <li><a href="blog.html">Field Notes</a></li>
+            <li><a href="index.html#contact" style="background:var(--moss); color:white; padding:8px 15px;">Get Started</a></li>
+        </ul>
+    </nav>
+
+    <section class="header">
+        <h1>Sample Content <em>Gallery</em></h1>
+        <p>Here's the type of content we create for rural real estate agents</p>
+    </section>
+
+    <section class="container">
+        <div class="gallery">
+            <!-- Post 1: Farm Listing Teaser -->
+            <div class="post">
+                <div class="post-image farm">🌾 Beautiful 80-Acre Farm</div>
+                <div class="post-content">
+                    <div class="post-type">Farm Listing Teaser</div>
+                    <div class="post-caption">
+                        <strong>New to market:</strong> 80 acres of prime agricultural land with creek frontage, established fencing, and heritage barn. Zoned for cattle or crops. 📍 Sitting pretty 30 min from town.
+                    </div>
+                    <div class="post-hashtags">
+                        #FarmLand #RuralLiving #LandForSale #AgriculturalProperty #CountryLife
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 2: Property Feature -->
+            <div class="post">
+                <div class="post-image land">🏡 Acreage with Views</div>
+                <div class="post-content">
+                    <div class="post-type">Property Feature Post</div>
+                    <div class="post-caption">
+                        <strong>Tuesday Spotlight:</strong> 12 acres with panoramic valley views. Gentle slope perfect for a home site or hobby farm. Utilities at road. No HOA—just peace, quiet, and horizon. ✨
+                    </div>
+                    <div class="post-hashtags">
+                        #LandListing #RuralRealEstate #PerfectHomesite #CountryLiving #WeekendGetaway
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 3: Building Opportunity -->
+            <div class="post">
+                <div class="post-image building">🏗️ Development Opportunity</div>
+                <div class="post-content">
+                    <div class="post-type">Development Post</div>
+                    <div class="post-caption">
+                        <strong>Investors, take note:</strong> 25 acres cleared and ready. Previously approved for mixed-use development. Water & sewer accessible. Priced to move. Let's talk potential. 🤝
+                    </div>
+                    <div class="post-hashtags">
+                        #DevelopmentLand #InvestmentProperty #RealEstateInvesting #LandDeal #CommercialOpportunity
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 4: Lifestyle Post -->
+            <div class="post">
+                <div class="post-image acreage">🌅 The Rural Dream</div>
+                <div class="post-content">
+                    <div class="post-type">Lifestyle / Emotional</div>
+                    <div class="post-caption">
+                        Some people dream about city lights. Some of us dream about open skies, morning roosters, and land that's truly ours. If that's you, let's find your perfect piece of rural heaven. 🌾✨
+                    </div>
+                    <div class="post-hashtags">
+                        #RuralLiving #Homesteading #FarmLife #CountrySide #DreamHome
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 5: Urgent/Scarcity -->
+            <div class="post">
+                <div class="post-image pasture">⏰ Don't Wait</div>
+                <div class="post-content">
+                    <div class="post-type">Urgency Post</div>
+                    <div class="post-caption">
+                        <strong>50 acres, prime location, 3 offers already.</strong> Land this good doesn't stay on the market long in our area. If you've been thinking about making a move—now's the time. Inbox open. 📩
+                    </div>
+                    <div class="post-hashtags">
+                        #SoldQuick #RuralRealEstate #LandForSale #ActFast #HotProperty
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 6: Educational -->
+            <div class="post">
+                <div class="post-image residential">💡 Did You Know?</div>
+                <div class="post-content">
+                    <div class="post-type">Educational / Tips</div>
+                    <div class="post-caption">
+                        <strong>Land Buyer Tip:</strong> Check flood zones, soil composition, and water access *before* you fall in love. We've got resources to help you ask the right questions. Comment below! 👇
+                    </div>
+                    <div class="post-hashtags">
+                        #RealEstateTips #BuyersGuide #LandBuying #HomeBuyerAdvice #Smart Shopping
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="note">
+            <strong>✦ A Note on These Samples:</strong> These are representative examples of our content style and voice. In real campaigns, we customize captions to each property's unique features, local market, and your agent brand. We also pair captions with high-quality property photography for maximum impact.
+        </div>
+
+        <div class="cta">
+            <h2>Ready to see how this works for <em>your</em> listings?</h2>
+            <p>These samples show our content style. Imagine this consistent posting driving inquiries, building your following, and filling your pipeline.</p>
+            <a href="index.html#contact" class="btn">Get Started with Your First Month</a>
+        </div>
+    </section>
+
+    <footer>
+        <div style="margin-bottom: 30px;">
+            <a href="portfolio.html">PORTFOLIO</a>
+            <a href="samples.html">SAMPLES</a>
+            <a href="pricing.html">PRICING</a>
+            <a href="about.html">METHOD</a>
+            <a href="blog.html">FIELD NOTES</a>
+        </div>
+        <p style="margin-bottom: 15px;"><a href="mailto:hollowcreek.media@outlook.com" style="color:rgba(255,255,255,0.6); font-size:11px; letter-spacing:1px; text-decoration:none;">hollowcreek.media@outlook.com</a></p>
+        <p style="font-size: 10px;">&copy; 2026 HOLLOW CREEK MEDIA. ALL RIGHTS RESERVED.</p>
+    </footer>
+</body>
+</html>
