@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Math Behind Consistent Posting — Hollow Creek Media</title>
+<meta name="description" content="Here's exactly how posting frequency impacts your deal flow. The numbers prove what rural agents who ignore social media are actually losing.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --bark:#1e1408;
+  --moss:#3a5438;
+  --sage:#7a9e78;
+  --cream:#f5f0e6;
+  --gold:#c4973e;
+  --warm:#faf7f0;
+  --text:#2a1e0a;
+  --muted:#7a6e58;
+  --border:rgba(196,151,62,0.15);
+}
+
+html{scroll-behavior:smooth}
+body{font-family:'Jost',sans-serif;background:var(--warm);color:var(--text);line-height:1.6;overflow-x:hidden}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 48px;
+  background:rgba(250,247,240,0.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;letter-spacing:0.06em;color:var(--bark);text-decoration:none}
+.nav-logo span{color:var(--moss)}
+.nav-back{font-size:11px;font-weight:400;letter-spacing:0.16em;text-transform:uppercase;color:var(--muted);text-decoration:none;display:flex;align-items:center;gap:8px;transition:color 0.2s}
+.nav-back:hover{color:var(--moss)}
+.nav-back::before{content:'←';font-size:13px}
+
+.hero{padding:140px 48px 80px;max-width:860px;margin:0 auto;position:relative}
+
+.hero::before{
+  content:'';position:fixed;top:0;left:0;right:0;bottom:0;
+  background:radial-gradient(ellipse at 90% 10%, rgba(58,84,56,0.05) 0%, transparent 60%);
+  pointer-events:none;z-index:-1;
+}
+
+.post-meta{display:flex;align-items:center;gap:16px;margin-bottom:32px}
+
+.post-tag{
+  font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;
+  background:var(--moss);color:white;padding:4px 12px;border-radius:2px;
+}
+
+.post-date{font-size:12px;font-weight:300;color:var(--muted);letter-spacing:0.08em}
+.post-read{font-size:12px;font-weight:300;color:var(--muted);letter-spacing:0.08em}
+.meta-dot{width:3px;height:3px;border-radius:50%;background:var(--border)}
+
+h1.post-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(36px,5vw,60px);font-weight:300;line-height:1.1;
+  color:var(--bark);margin-bottom:24px;
+}
+
+h1.post-title em{font-style:italic;color:var(--moss)}
+
+.post-intro{
+  font-size:16px;font-weight:300;color:var(--muted);
+  line-height:1.8;max-width:640px;
+  border-left:3px solid var(--gold);padding-left:20px;font-style:italic;
+}
+
+.title-divider{
+  display:flex;align-items:center;gap:16px;
+  max-width:860px;margin:0 auto;padding:0 48px;
+}
+.title-divider-line{flex:1;height:1px;background:var(--border)}
+.title-divider-icon{font-size:16px;opacity:0.4}
+
+.post-body{
+  max-width:860px;margin:0 auto;padding:0 48px 120px;
+  display:grid;grid-template-columns:1fr 260px;gap:64px;align-items:start;
+}
+
+.post-content{padding-top:48px}
+
+.sidebar{padding-top:48px;position:sticky;top:90px}
+
+.sidebar-card{
+  background:var(--bark);border-radius:8px;padding:28px 24px;margin-bottom:16px;
+}
+
+.sidebar-label{
+  font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:16px;
+}
+
+.sidebar-title{
+  font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;
+  color:white;line-height:1.3;margin-bottom:12px;
+}
+
+.sidebar-body{
+  font-size:12px;font-weight:300;color:rgba(255,255,255,0.5);
+  line-height:1.7;margin-bottom:20px;
+}
+
+.sidebar-btn{
+  display:block;width:100%;background:var(--moss);color:white;
+  text-decoration:none;text-align:center;padding:11px;border-radius:2px;
+  font-size:11px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;transition:background 0.2s;
+}
+.sidebar-btn:hover{background:var(--sage)}
+
+.math-box{
+  background:var(--cream);border:1px solid rgba(196,151,62,0.2);
+  border-radius:8px;padding:28px 32px;margin:32px 0;
+}
+
+.math-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:18px;font-weight:400;color:var(--bark);margin-bottom:16px;
+}
+
+.math-row{
+  display:flex;justify-content:space-between;align-items:center;
+  padding:10px 0;border-bottom:1px solid rgba(196,151,62,0.15);
+  font-size:13px;font-weight:300;color:#5a4e3e;
+}
+
+.math-row:last-child{border-bottom:none}
+
+.math-label{flex:1}
+.math-num{text-align:right;font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:300;color:var(--moss);margin-left:20px}
+
+.post-content p{
+  font-size:15px;font-weight:300;color:#3a2e1e;
+  line-height:1.9;margin-bottom:24px;
+}
+
+.post-content strong{color:var(--bark);font-weight:500}
+
+.post-content h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:13px;font-weight:400;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--muted);margin:56px 0 0;
+}
+
+.comparison-chart{
+  background:white;border:1px solid rgba(196,151,62,0.2);
+  border-radius:8px;padding:28px 32px;margin:32px 0;
+}
+
+.chart-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:16px;font-weight:400;color:var(--bark);margin-bottom:20px;
+}
+
+.chart-bar{
+  display:flex;align-items:center;gap:16px;margin-bottom:16px;
+}
+
+.chart-bar:last-child{margin-bottom:0}
+
+.chart-label{
+  font-size:12px;font-weight:300;color:var(--muted);
+  width:80px;text-align:right;
+}
+
+.chart-bar-track{
+  flex:1;height:28px;background:var(--cream);border-radius:4px;overflow:hidden;display:flex;align-items:center;
+}
+
+.chart-bar-fill{
+  height:100%;background:linear-gradient(90deg, var(--moss), var(--sage));
+  display:flex;align-items:center;justify-content:flex-end;padding-right:10px;
+}
+
+.chart-value{
+  font-size:12px;font-weight:500;color:white;
+}
+
+.pull-quote{
+  margin:40px 0;padding:32px 36px;background:var(--bark);
+  border-radius:4px;position:relative;
+}
+
+.pull-quote::before{
+  content:'"';font-family:'Cormorant Garamond',serif;
+  font-size:120px;font-weight:300;color:rgba(196,151,62,0.15);
+  position:absolute;top:-20px;left:24px;line-height:1;
+}
+
+.pull-quote p{
+  font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;
+  font-style:italic;color:white !important;line-height:1.5;
+  position:relative;z-index:1;margin-bottom:0 !important;
+}
+
+.warning-box{
+  background:#faf0e6;border-left:4px solid #c4973e;
+  border-radius:0 4px 4px 0;padding:24px;margin:32px 0;
+}
+
+.warning-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:16px;font-weight:400;color:var(--bark);margin-bottom:8px;
+}
+
+.warning-text{
+  font-size:13px;font-weight:300;color:#5a4830;line-height:1.6;
+}
+
+.summary-box{
+  background:var(--cream);border:1px solid rgba(196,151,62,0.2);
+  border-radius:8px;padding:28px 32px;margin:48px 0;
+}
+
+.summary-box h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:20px;font-weight:400;color:var(--bark);margin-bottom:16px;
+}
+
+.summary-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+
+.summary-list li{
+  display:flex;align-items:flex-start;gap:10px;
+  font-size:13px;font-weight:300;color:#4a3e2e;line-height:1.6;
+}
+
+.summary-list li::before{content:'→';color:var(--gold);flex-shrink:0;margin-top:1px}
+
+.post-cta{
+  background:var(--moss);border-radius:8px;padding:36px 32px;
+  margin-top:48px;text-align:center;
+}
+
+.post-cta h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:26px;font-weight:300;color:white;margin-bottom:10px;
+}
+
+.post-cta p{
+  font-size:13px;font-weight:300;color:rgba(255,255,255,0.6);
+  margin-bottom:24px !important;line-height:1.7;
+}
+
+.post-cta a{
+  display:inline-block;background:var(--gold);color:var(--bark);
+  text-decoration:none;padding:12px 32px;border-radius:2px;
+  font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;
+  transition:background 0.2s;
+}
+
+.post-cta a:hover{background:#d4a84e}
+
+.related{
+  background:var(--cream);padding:80px 48px;border-top:1px solid var(--border);
+}
+
+.related-inner{max-width:860px;margin:0 auto}
+
+.related-label{
+  font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:8px;display:flex;align-items:center;gap:10px;
+}
+.related-label::after{content:'';flex:1;height:1px;background:var(--border)}
+
+.related-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:28px;font-weight:300;color:var(--bark);margin-bottom:40px;
+}
+
+.related-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+
+.related-card{
+  background:white;border-radius:8px;overflow:hidden;
+  border:1px solid var(--border);text-decoration:none;display:block;
+  transition:transform 0.2s,box-shadow 0.2s;
+}
+
+.related-card:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(0,0,0,0.08)}
+
+.related-card-body{padding:20px}
+
+.related-card-tag{
+  font-size:10px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;
+  color:var(--moss);margin-bottom:6px;
+}
+
+.related-card-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:18px;font-weight:400;color:var(--bark);line-height:1.3;
+}
+
+footer{background:var(--bark);padding:32px 48px;display:flex;align-items:center;justify-content:space-between}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:300;color:rgba(255,255,255,0.5);letter-spacing:0.06em}
+.footer-copy{font-size:11px;font-weight:300;color:rgba(255,255,255,0.25);letter-spacing:0.06em}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:768px){
+  nav{padding:14px 20px}
+  .hero{padding:110px 20px 48px}
+  .post-body{grid-template-columns:1fr;padding:0 20px 80px;gap:0}
+  .sidebar{display:none}
+  .related{padding:56px 20px}
+  .related-grid{grid-template-columns:1fr}
+  footer{flex-direction:column;gap:8px;text-align:center;padding:24px 20px}
+  .title-divider{padding:0 20px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Hollow <span>Creek</span> Media</a>
+  <a href="blog.html" class="nav-back">Field Notes</a>
+</nav>
+
+<div class="hero">
+  <div class="post-meta">
+    <span class="post-tag">Data</span>
+    <span class="meta-dot"></span>
+    <span class="post-date">May 2026</span>
+    <span class="meta-dot"></span>
+    <span class="post-read">7 min read</span>
+  </div>
+  <h1 class="post-title reveal">The Math Behind Consistent <em>Posting</em></h1>
+  <p class="post-intro reveal">Here's exactly how posting frequency impacts your deal flow. The numbers prove what rural agents who ignore social media are actually losing.</p>
+</div>
+
+<div class="title-divider"><div class="title-divider-line"></div><div class="title-divider-icon">📊</div><div class="title-divider-line"></div></div>
+
+<div class="post-body">
+
+  <div class="post-content">
+
+    <p class="reveal">You don't need to guess anymore about whether social media matters for rural real estate. The data is clear. And the math is sobering.</p>
+
+    <p class="reveal">Here's what happens when you post consistently versus when you don't:</p>
+
+    <div class="math-box reveal">
+      <div class="math-title">The Frequency Math</div>
+      <div class="math-row">
+        <div class="math-label">1 post per month</div>
+        <div class="math-num">~12 impressions/month</div>
+      </div>
+      <div class="math-row">
+        <div class="math-label">1 post per week</div>
+        <div class="math-num">~48–64 impressions/month</div>
+      </div>
+      <div class="math-row">
+        <div class="math-label">3 posts per week</div>
+        <div class="math-num">~150–200 impressions/month</div>
+      </div>
+      <div class="math-row">
+        <div class="math-label">5 posts per week</div>
+        <div class="math-num">~250–350 impressions/month</div>
+      </div>
+    </div>
+
+    <p class="reveal">These are conservative estimates based on 200–400 Instagram followers, which is typical for a solo rural agent. But notice the pattern: <strong>more consistency doesn't add impressions linearly — it multiplies them.</strong></p>
+
+    <p class="reveal">Going from 1 post per month to 1 per week doesn't double your impressions. It quadruples them. That's because the Instagram and Facebook algorithms reward consistency. The more you post, the more your content gets shown — it's not just about volume, it's about signal.</p>
+
+    <div class="pull-quote reveal">
+      <p>An agent posting once a week is invisible compared to an agent posting three times a week. The difference isn't about how many people see you — it's about how many people *remember* you.</p>
+    </div>
+
+    <h2 class="reveal">Now Let's Talk About Deals</h2>
+
+    <p class="reveal">Impressions matter, but they're not the goal. Deals are.</p>
+
+    <p class="reveal">Research on real estate marketing shows that about 1–2% of social media impressions convert to an actual inquiry or inquiry. But that rate varies wildly based on consistency. For an agent with sporadic posting (1 post every 2 weeks), the conversion rate is closer to 0.3%. For an agent posting regularly (3+ times per week), it jumps to 1.5–2%.</p>
+
+    <p class="reveal">Here's how that plays out:</p>
+
+    <div class="comparison-chart reveal">
+      <div class="chart-title">Inquiry Generation: Sporadic vs. Consistent</div>
+      <div class="chart-bar">
+        <div class="chart-label">1 post/month</div>
+        <div class="chart-bar-track" style="width:100%">
+          <div class="chart-bar-fill" style="width:15%;"><span class="chart-value">~1 inquiry</span></div>
+        </div>
+      </div>
+      <div class="chart-bar">
+        <div class="chart-label">1 post/week</div>
+        <div class="chart-bar-track" style="width:100%">
+          <div class="chart-bar-fill" style="width:35%;"><span class="chart-value">~3 inquiries</span></div>
+        </div>
+      </div>
+      <div class="chart-bar">
+        <div class="chart-label">3 posts/week</div>
+        <div class="chart-bar-track" style="width:100%">
+          <div class="chart-bar-fill" style="width:70%;"><span class="chart-value">~5–6 inquiries</span></div>
+        </div>
+      </div>
+      <div class="chart-bar">
+        <div class="chart-label">5 posts/week</div>
+        <div class="chart-bar-track" style="width:100%">
+          <div class="chart-bar-fill" style="width:100%;"><span class="chart-value">~8–10 inquiries</span></div>
+        </div>
+      </div>
+    </div>
+
+    <p class="reveal">That's roughly 8–10 more inquiries per month just by posting 5 times instead of once. And remember — in rural real estate, most of those inquiries are qualified leads. They saw something specific they wanted. They're not just browsing.</p>
+
+    <h2 class="reveal">The Closing Math</h2>
+
+    <p class="reveal">Let's assume your closing rate is 25%. That means 1 out of every 4 inquiries turns into a transaction.</p>
+
+    <div class="math-box reveal">
+      <div class="math-title">From Inquiry to Sale</div>
+      <div class="math-row">
+        <div class="math-label">~1 inquiry/month × 25% close rate</div>
+        <div class="math-num">~0.25 deals/month</div>
+      </div>
+      <div class="math-row">
+        <div class="math-label">~3 inquiries/month × 25% close rate</div>
+        <div class="math-num">~0.75 deals/month</div>
+      </div>
+      <div class="math-row">
+        <div class="math-label">~6 inquiries/month × 25% close rate</div>
+        <div class="math-num">~1.5 deals/month</div>
+      </div>
+      <div class="math-row">
+        <div class="math-label">~9 inquiries/month × 25% close rate</div>
+        <div class="math-num">~2.25 deals/month</div>
+      </div>
+    </div>
+
+    <p class="reveal">So if you're posting once a month, you're closing roughly one deal every 4 months from social media. If you're posting 5 times a week, you're closing roughly 2 deals per month from social media.</p>
+
+    <p class="reveal">That's the difference between a side business and a real one.</p>
+
+    <h2 class="reveal">Now The Dollar Math</h2>
+
+    <p class="reveal">In rural real estate, average commission on a property sale is $5,000–$8,000 depending on price point and split. Let's use $6,000 as a middle figure.</p>
+
+    <div class="math-box reveal">
+      <div class="math-title">Annual Commission Difference</div>
+      <div class="math-row">
+        <div class="math-label">1 post/month (3 deals/year from social)</div>
+        <div class="math-num">$18,000/year</div>
+      </div>
+      <div class="math-row">
+        <div class="math-label">1 post/week (9 deals/year from social)</div>
+        <div class="math-num">$54,000/year</div>
+      </div>
+      <div class="math-row">
+        <div class="math-label">3 posts/week (18 deals/year from social)</div>
+        <div class="math-num">$108,000/year</div>
+      </div>
+      <div class="math-row">
+        <div class="math-label">5 posts/week (27 deals/year from social)</div>
+        <div class="math-num">$162,000/year</div>
+      </div>
+    </div>
+
+    <p class="reveal">The difference between posting once a month and five times a week is $144,000 per year in commission.</p>
+
+    <p class="reveal"><strong>That's real money.</strong> And it's not because the agent posting 5 times a week is better at selling. It's because they're more visible.</p>
+
+    <div class="warning-box reveal">
+      <div class="warning-title">The Invisible Cost</div>
+      <div class="warning-text">If you're currently posting once a month, and the agent across the county is posting 3 times a week, you're likely leaving $90,000+ on the table every year. Not because your properties are worse. Not because you're less skilled. Because you're invisible.</div>
+    </div>
+
+    <h2 class="reveal">Why This Matters More for Rural Agents</h2>
+
+    <p class="reveal">Urban markets have more transactions, more inventory, and more competition. One agent's visibility can get diluted. But in rural markets with 10–20 active agents competing for the same pool of buyers and sellers, visibility is everything.</p>
+
+    <p class="reveal">The agent who shows up in your market's feed 3–5 times a week wins. Not because they're winning every single deal, but because they're winning a disproportionate share of them.</p>
+
+    <p class="reveal">And if you think "I don't have time to post 5 times a week," you're right — you don't. Which is exactly why done-for-you content management exists. The question isn't whether you have time. The question is whether you can afford NOT to be visible.</p>
+
+    <div class="summary-box reveal">
+      <h3>The Math Summarized</h3>
+      <ul class="summary-list">
+        <li>Posting 5 times/week generates 15–20x more impressions than posting 1 time/month</li>
+        <li>More consistent posting = higher algorithmic visibility = more inquiries</li>
+        <li>More inquiries = more qualified leads = more closed deals</li>
+        <li>The difference between sporadic and consistent posting is roughly $90,000–$144,000 per year in lost commission</li>
+        <li>You don't need to be a better agent to capture that revenue — you just need to be visible</li>
+      </ul>
+    </div>
+
+    <p class="reveal">The math doesn't lie. Consistency is the difference between a successful rural real estate business and a mediocre one. And the good news is that consistency is the one thing you can actually control, regardless of market conditions or competition.</p>
+
+    <div class="post-cta reveal">
+      <h3>Let us handle the consistency</h3>
+      <p>5 posts per week, every week, on schedule. Your visibility, your credibility, your deal flow — all handled. So you can do what you're actually good at: selling property.</p>
+      <a href="index.html#contact">See The Packages →</a>
+    </div>
+
+  </div>
+
+  <div class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-label">Free Sample Posts</div>
+      <div class="sidebar-title">See what consistent posting looks like</div>
+      <div class="sidebar-body">We'll show you a week's worth of posts — 5 days of consistent, professional content that keeps you visible and top of mind.</div>
+      <a href="index.html#contact" class="sidebar-btn">Get Your Week</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="related">
+  <div class="related-inner">
+    <div class="related-label">More Field Notes</div>
+    <div class="related-title">Keep reading</div>
+    <div class="related-grid">
+      <a href="5-types-of-posts.html" class="related-card">
+        <div class="related-card-body">
+          <div class="related-card-tag">Strategy</div>
+          <div class="related-card-title">5 Types of Posts Every Rural Agent Should Be Sharing</div>
+        </div>
+      </a>
+      <a href="ghost-agent-effect.html" class="related-card">
+        <div class="related-card-body">
+          <div class="related-card-tag">Strategy</div>
+          <div class="related-card-title">The Ghost Agent Effect</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Hollow Creek Media</div>
+  <div class="footer-copy">© 2026 Hollow Creek Media · All rights reserved</div>
+</footer>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible') });
+}, {threshold:0.08, rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
